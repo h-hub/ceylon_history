@@ -12,6 +12,7 @@ def index(request):
 
     context = {
         'events': events,
+        'end': range(2500)
     }
 
     return render(request, 'template/home.html', context)

@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'home',
     'event',
+    'mathfilters',
 ]
 
 MIDDLEWARE = [
@@ -83,7 +84,7 @@ WSGI_APPLICATION = 'ceylon_history.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-DATABASES['default'] = dj_database_url.config(default='url')
+DATABASES['default'] = dj_database_url.config(default='test')
 
 
 # Password validation
