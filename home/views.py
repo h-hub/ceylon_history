@@ -8,6 +8,10 @@ from event.models import Event
 
 def index(request):
 
-    event = Event.objects.all()
+    events = Event.objects.all()
 
-    return render(request, 'template/home.html')
+    context = {
+        'events': events,
+    }
+
+    return render(request, 'template/home.html', context)

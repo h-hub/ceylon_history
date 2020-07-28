@@ -6,6 +6,17 @@
 <link rel="stylesheet" type="text/css" href="{% static "home.css" %}">
 
 <div class="row">
+    <div class="col-md-12">
+        <h1>Home page</h1>
+    </div>
+
+    <div class="col-md-12">
+        <h2>Content</h2>
+        {% for entry in events %}
+            {{entry.name}}
+        {% endfor %}
+    </div>
+
     <div class="col first">
       Home page test
     </div>
