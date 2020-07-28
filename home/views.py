@@ -7,7 +7,6 @@ from event.models import Event
 
 
 def index(request):
-
     events = Event.objects.all()
 
     context = {
@@ -16,3 +15,16 @@ def index(request):
     }
 
     return render(request, 'template/home.html', context)
+
+
+def getEvent(request):
+    year = request.GET.get('year', None)
+    events = []
+    events = Event.objects.get(date__year=year)
+
+
+    data = {
+        'events': events
+    }
+
+    return JsonResponse(data)
